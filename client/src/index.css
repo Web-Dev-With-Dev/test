@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom: ensure full-page background respects Tailwind theme */
+
+body {
+  @apply bg-gray-100;
+}
