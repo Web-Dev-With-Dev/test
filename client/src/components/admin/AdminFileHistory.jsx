@@ -13,6 +13,10 @@ export default function AdminFileHistory() {
   const [totalPages, setTotalPages] = useState(1);
   const [stats, setStats] = useState(null);
 
+const getAuthHeaders = () => ({
+    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+  });
+  
   useEffect(() => {
     console.log('🔄 AdminFileHistory mounted - initial data fetch');
     fetchHistory();
@@ -308,4 +312,5 @@ export default function AdminFileHistory() {
       )}
     </div>
   );
+
 }
